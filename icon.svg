@@ -1,0 +1,52 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 背景漸層：營造高級感與立體感 -->
+    <radialGradient id="bg_gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#D4C4AA" />
+      <stop offset="100%" stop-color="#C5AE89" />
+    </radialGradient>
+    
+    <!-- 陰影濾鏡：讓中心元素浮現 -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12" />
+      <feOffset dx="0" dy="8" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 底層背景 -->
+  <rect width="512" height="512" rx="110" fill="url(#bg_gradient)"/>
+
+  <!-- 頂部微弱光澤 (Glossy Sweep) -->
+  <path d="M512 110C512 49.2 462.8 0 402 0H110C49.2 0 0 49.2 0 110V160C120 120 392 120 512 160V110Z" fill="white" fill-opacity="0.12"/>
+
+  <!-- 中心視覺組件 (含陰影) -->
+  <g filter="url(#shadow)">
+    <!-- 膠囊藥丸 -->
+    <g transform="translate(146, 176) rotate(-45 110 80)">
+      <!-- 藥丸前半部 (白色 - 象徵純淨) -->
+      <path d="M40 80C40 57.9 57.9 40 80 40H140V120H80C57.9 120 40 102.1 40 80Z" fill="white"/>
+      <!-- 藥丸後半部 (鼠尾草綠 - 象徵自然與健康) -->
+      <path d="M140 40H200C222.1 40 240 57.9 240 80C240 102.1 222.1 120 200 120H140V40Z" fill="#8DA461"/>
+      <!-- 藥丸反光點 -->
+      <rect x="65" y="55" width="40" height="8" rx="4" fill="white" fill-opacity="0.3"/>
+    </g>
+
+    <!-- 智慧取景框線條 (優雅的簡約細線) -->
+    <g stroke="white" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+      <path d="M165 130H130V165" />
+      <path d="M347 130H382V165" />
+      <path d="M165 382H130V347" />
+      <path d="M347 382H382V347" />
+    </g>
+  </g>
+
+  <!-- 底部微反射光 -->
+  <rect x="156" y="435" width="200" height="6" rx="3" fill="white" fill-opacity="0.1"/>
+</svg>

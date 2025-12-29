@@ -1,0 +1,16 @@
+{
+  "short_name": "PillHelper",
+  "name": "藥品小幫手 Pillchecker",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#C5AE89",
+  "background_color": "#FDFBF7"
+}
